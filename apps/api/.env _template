@@ -1,4 +1,7 @@
-DB_PORT=5432
+DB_PORT=40201
 DB_USER=postgres
 DB_PASSWORD=mypassword
 DB_NAME=pg_dev
+BETTER_AUTH_SECRET=cTYqYUsAb7yNeIt5afY92QVX9H3b6N9k
+# 浏览器经 Vite 访问前端时使用（与 trustedOrigins 一致）
+BETTER_AUTH_URL=http://localhost:40100

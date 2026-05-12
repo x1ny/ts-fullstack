@@ -1,5 +1,10 @@
-import { drizzle } from 'drizzle-orm/node-postgres';
+import { drizzle } from 'drizzle-orm/node-postgres'
 
-const db = drizzle(`postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost:${process.env.DB_PORT}/${process.env.DB_NAME}`);
+import * as schema from './schema/auth-schema'
 
-export default db;
+const db = drizzle(
+  `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@localhost:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+  { schema },
+)
+
+export default db

@@ -1,10 +1,11 @@
 {
   "name": "api",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "docker-compose up -d && bun run --hot src/index.ts"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.7.6",
+    "better-auth": "^1.6.10",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.12.18",
     "pg": "^8.20.0",
